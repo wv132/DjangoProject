@@ -12,9 +12,16 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from pathlib import Path
 
+def getabspath(*x):
+    return os.path.join(os.path.abspath(os.path.dirname(__file__)), *x)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+#Paths
+TEMPLATE_DIRS = getabspath('templates')
+MEDIA_ROOT = getabspath('media')
+MEDIA_URL = '/media'
 
 
 # Quick-start development settings - unsuitable for production
@@ -33,11 +40,13 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',
+    'django.contrib.admindocs',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites'
 ]
 
 MIDDLEWARE = [
