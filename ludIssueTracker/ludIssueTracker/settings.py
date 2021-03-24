@@ -39,6 +39,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'ludissues',
     'django.contrib.admin',
     'django.contrib.admindocs',
     'django.contrib.auth',
