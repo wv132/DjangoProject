@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Question
-from django.http import Http404
+from django.http import Http404, HttpResponse
 
 
 def index(request):
