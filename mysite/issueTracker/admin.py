@@ -5,7 +5,7 @@ from .models import Issue
 class IssueAdmin(admin.ModelAdmin):
     date_hierarchy = 'opened_on'
     list_filter = ('status', 'owner')
-    list_display = ('id', 'name', 'status','owner')
+    list_display = ('id', 'title', 'summary', 'status','owner')
     search_fields = ['description', 'status']
 
 
